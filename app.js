@@ -4,7 +4,7 @@ const { getWeather } = require('./templates/api'); // Import the getWeather func
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'templates')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 const PORT = 3000;
 
 app.get("/", (req, res) => {
